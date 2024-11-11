@@ -25,43 +25,27 @@ document.querySelector(".check").addEventListener("click", function () {
     document.querySelector(".highscore").textContent = highscore;
   } else if (guess !== HideenNumber) {
     if (score > 1) {
-      // document.querySelector(".message").textContent = guess > HideenNumber
-      // ? " This is hight Number 📈"
-      //  : " This is Low Number 📉"
-      // );
-      printMasseg(
-        guess > HideenNumber
-          ? " This is hight Number 📈"
-          : " This is Low Number 📉"
-      );
-      score--;
-      document.querySelector(".score").textContent = score;
-    } else {
-      printMasseg(" You Lost The Game😿");
-      document.querySelector(".score").textContent = 0;
-    }
-  }
+   
   //when guess is hight
-  //   } else if (guess > HideenNumber) {
-  //     if (score > 1) {
-  //       document.querySelector(".message").textContent =
-  //         " This is hight Number 📈";
-  //       score--;
-  //       document.querySelector(".score").textContent = score;
-  //     } else {
-  //       document.querySelector(".message").textContent = " You Lost The Game😿";
-  //       document.querySelector(".score").textContent = 0;
-  //     }
-  //     // when guess is Low
-  //   } else if (guess < HideenNumber) {
-  //     if (score > 1) {
-  //       document.querySelector(".message").textContent = " This is Low Number 📉";
-  //       score--;
-  //       document.querySelector(".score").textContent = score;
-  //     } else {
-  //       document.querySelector(".message").textContent = " You Lost The Game😿";
-  //       document.querySelector(".score").textContent = 0;
-  //     }
+    } else if (guess > HideenNumber) {
+      if (score > 1) {
+        printMasseg(" This is hight Number 📈");
+        score--;
+        document.querySelector(".score").textContent = score;
+      } else {
+        printMasseg(" You Lost The Game😿");
+        document.querySelector(".score").textContent = 0;
+      }
+      // when guess is Low
+    } else if (guess < HideenNumber) {
+      if (score > 1) {
+         printMasseg( " This is Low Number 📉");
+        score--;
+        document.querySelector(".score").textContent = score;
+      } else {
+        printMasseg(" You Lost The Game😿");
+        document.querySelector(".score").textContent = 0;
+      }
 });
 
 document.querySelector(".again").addEventListener("click", function () {
